@@ -1,0 +1,16 @@
+### 1. 주문 생성 (POST /orders)
+POST http://localhost:8080/orders
+Content-Type: application/json
+
+{
+  "orderNumber": "SANTA9999"
+}
+
+### 2. 주문 상태 업데이트 (PUT /orders/{id}/status)
+PUT http://localhost:8080/orders/10/status?status=COMPLETED
+
+### 3. 페이징을 통한 주문 조회 (GET /orders): 기본설정(id/asc 정렬, 10개씩 조회, 1번째 페이지)
+GET http://localhost:8080/orders
+
+### 3. 페이징을 통한 주문 조회 (GET /orders): created_at/desc 정렬, 5개씩 조회, 1번째 페이지
+GET http://localhost:8080/orders?page=0&size=5&sort=createdAt,desc
