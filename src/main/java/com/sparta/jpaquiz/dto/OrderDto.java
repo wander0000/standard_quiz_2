@@ -4,6 +4,6 @@ import lombok.Getter;
 
 @Getter
 public class OrderDto {
-    private String orderNumber;
+	private String orderNumber;
 }
 
